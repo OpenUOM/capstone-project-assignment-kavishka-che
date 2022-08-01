@@ -32,7 +32,7 @@ const readTeachers = async () => {
     });
 }
 
-const readTeacherInfo = async () => {
+const readTeacherInfo = async (id) => {
     const sql = `SELECT * FROM dummyData`
     return new Promise((resolve, reject) => {
         knex_db
@@ -46,7 +46,7 @@ const readTeacherInfo = async () => {
     });
 }
 
-const addTeacher = async () => {
+const addTeacher = async (id,name,age) => {
     const sql = `SELECT * FROM dummyData`
     return new Promise((resolve, reject) => {
         knex_db
@@ -60,7 +60,7 @@ const addTeacher = async () => {
     });
 }
 
-const updateTeacher = async () => {
+const updateTeacher = async (name,age,id) => {
     const sql = `SELECT * FROM Teacher`
     return new Promise((resolve, reject) => {
         knex_db
@@ -74,7 +74,7 @@ const updateTeacher = async () => {
     });
 }
 
-const deleteTeacher = async () => {
+const deleteTeacher = async (id) => {
     const sql = `SELECT * FROM dummyData`
     return new Promise((resolve, reject) => {
         knex_db
@@ -102,7 +102,7 @@ const readStudents = async () => {
     });
 }
 
-const readStudentInfo = async () => {
+const readStudentInfo = async (id) => {
     const sql = `SELECT * FROM student`
     return new Promise((resolve, reject) => {
         knex_db
@@ -116,7 +116,7 @@ const readStudentInfo = async () => {
     });
 }
 
-const addStudent = async () => {
+const addStudent = async (id,name,age,religion) => {
     const sql = `SELECT * FROM Student`
     return new Promise((resolve, reject) => {
         knex_db
@@ -130,7 +130,7 @@ const addStudent = async () => {
     });
 }
 
-const updateStudent = async () => {
+const updateStudent = async (name,age,religion, id) => {
     const sql = `SELECT * FROM student`
     return new Promise((resolve, reject) => {
         knex_db
@@ -144,7 +144,7 @@ const updateStudent = async () => {
     });
 } 
 
-const deleteStudent = async () => {
+const deleteStudent = async (id) => {
     const sql = `SELECT * FROM dummyData`
     return new Promise((resolve, reject) => {
         knex_db
